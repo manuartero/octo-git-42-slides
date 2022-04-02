@@ -1,0 +1,28 @@
+code {
+  background-color: #eeeeee;
+  color: pink;
+}
+
+.commit {
+  border-radius: 50%;
+  margin: 5px;
+  color: steel;
+}
+.green-border {
+  border: 4px solid darkslategray;
+}
+.violet-border {
+  border: 4px solid mediumpurple;
+}
+.gold-border {
+  border: 4px solid gold;
+}
+.red {
+  color: red;
+}
+.gold {
+  color: gold;
+}
+.w-full {
+  background-size: contain !important;
+}
