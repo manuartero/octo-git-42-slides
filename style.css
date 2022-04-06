@@ -1,5 +1,5 @@
 code {
-  background-color: #eeeeee;
+  padding: 0 5px;
   color: pink;
 }
 
@@ -25,4 +25,12 @@ code {
 }
 .w-full {
   background-size: contain !important;
+}
+
+:not(pre) > code::before, :not(pre) > code::after {
+  content: none;
+}
+
+h1,h2,h3,h4 {
+  margin-bottom: 16px;
 }

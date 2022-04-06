@@ -3,13 +3,15 @@ theme: default
 layout: cover
 background: /images/backgrounds/bg-1.jpg
 class: "text-center"
-title: cover
+title: Cover
 highlighter: shiki
 lineNumbers: false
 colorSchema: 'dark'
 info: |
   # Git: Playing With History
   ## A workshop for 42 Campus
+hideInToc: true
+
 # persist drawings in exports and build
 drawings:
   enabled: false
@@ -20,8 +22,6 @@ fonts:
   serif: "Robot Slab"
   mono: "Courier"
 
-defaults:
-  layout: 'default'
 ---
 
 # Git: playing with History
@@ -30,78 +30,71 @@ defaults:
 
 A workshop for 42 Campus
 
-<div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/manutero/octo-git-42" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-  <a href="https://github.com/manutero/octo-git-42" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <ri:slideshow-line/>
-  </a>
-</div>
-
 ---
 layout: intro
 image: /images/who-am-i/tetuan-valley.png
 title: Who am I?
+hideInToc: true
 ---
 
 <style>
-  .slidev-vclick-hidden {
-    display: none;
+  span {
+    color: pink;
   }
 </style>
 # Who am I?
 
 <v-clicks>
 
-- Tetuan Valley (Intern)
-- Wayra (Intern)
-- Yaap (Junior)
-- Doctor 24 (Junior)
-- Tuenti (Middle)
-- Telefonica (Senior)
+  - Tetuan Valley (Intern) <span>[ 2012 ]</span>
+  - Wayra (Intern) <span>[ 2013 ]</span>
+  - Yaap (Junior) <span>[ 2014 ]</span>
+  - Doctor 24 (Junior) <span>[ 2015 ]</span>
+  - Tuenti (Middle)<span>[ 2017 ]</span>
+  - Telefonica (Senior)<span>[ 2022 ]</span>
 
 </v-clicks>
 
 ::right::
+<div class="abs-br m-6 flex gap-2">
+<a href="https://github.com/manutero" target="_blank" alt="GitHub"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+</a>
 
-<v-clicks>
-  <img v-click v-click-hide src='/images/who-am-i/tetuan-valley.png' class="m-40 h-40 rounded shadow" />
-  <img v-click v-click-hide src='/images/who-am-i/vuqio.png' class="m-40 h-40 rounded shadow" />
-  <img v-click v-click-hide src='/images/who-am-i/yaap.jpeg' class="m-40 h-40 rounded shadow" />
-  <img v-click v-click-hide src='/images/who-am-i/doctor24.png' class="m-40 h-40 rounded shadow" />
-  <img v-click v-click-hide src='/images/who-am-i/tuenti.png' class="m-40 h-40 rounded shadow" />
-  <img v-click v-click-hide src='/images/who-am-i/telefoncia.png' class="m-40 h-40 rounded shadow" />
-</v-clicks>
-
+<a href="https://stackoverflow.com/users/1614677/manu?tab=profile" target="_blank" alt="Stackoverflow"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <cib-stackoverflow />
+</a>
+</div>
 ---
 layout: section
 title: index
+hideInToc: true
 ---
 
-- One concept
-
----
-layout: statement
-background: './public/images/backgrounds/bg-0.jpg'
-title: statement I
----
-
-Once you have commit you can't loose your work
+<Toc />
 
 ---
 layout: statement
-title: statement II
+title: Statement
 ---
 
-## Once you have commit **you can't losse your work**
+Once you `$> git commit`, you can't loose your work.
+
+---
+layout: statement
+title: Statement II
+hideInToc: true
+---
+
+## Once you `$> git commit`,
+## **you can't losse your work**
 
 ---
 layout: image
 image: /images/main-idea/zelda.png
-title: Saving Point
+title: Saving Points
 ---
 
 commit = saving point
@@ -116,6 +109,7 @@ commit = saving point
 ---
 layout: center
 title: Game run
+hideInToc: true
 ---
 
 <style>
@@ -167,7 +161,6 @@ title: Intro Rebase
 ### Rewrite the history
 
 <br>
-<br>
 
 - After getting the sword and the book... <ph-sword class="text-2xl" /> <bx-book-bookmark class="text-2xl" />
 - We did beat the bird <ph-bird class="text-2xl" />
@@ -195,68 +188,16 @@ background: "/images/backgrounds/bg-1.jpg"
 title: Workshop Time
 ---
 
-asdasd
-
----
-
-# Foundations: `merge`
-
-`asd`
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+## Show me the code
 
 ---
 layout: image-right
 image: /images/repo/create_react_app.png
 title: Example repo - main
+hideInToc: true
 ---
 
 ##  <carbon-logo-github /> Octo-Git-42
-
-<br>
 
 - branch: `main`
 - commit: `df55345`
@@ -269,11 +210,10 @@ title: Example repo - main
 layout: image-right
 image: /images/repo/replace_favicon.png
 title: Example repo - main-layout
+hideInToc: true
 ---
 
 ## <carbon-logo-github /> Octo-Git-42
-
-<br>
 
 - branch: `feat/main-layout`
 - commit: `8a134b4`
@@ -286,11 +226,10 @@ title: Example repo - main-layout
 layout: image-right
 image: /images/repo/detects_42.png
 title: Example repo - tree-monkey-counter
+hideInToc: true
 ---
 
 ## <carbon-logo-github /> Octo-Git-42
-
-<br>
 
 - branch: `feat/tree-monkey-counter`
 - commit: `e7e28c3`
@@ -303,11 +242,10 @@ title: Example repo - tree-monkey-counter
 layout: image-right
 image: /images/repo/fix_and_test.png
 title: Example repo - test-monkey-counter
+hideInToc: true
 ---
 
 ## <carbon-logo-github /> Octo-Git-42
-
-<br>
 
 - branch: `test/monkey-counter`
 - commit: `c0cb057`
@@ -317,13 +255,44 @@ title: Example repo - test-monkey-counter
 <img src="/images/repo/tree-test-monkey-counter.png">
 
 ---
+layout: center
+title: Cheat Sheet
+---
+
+## git rebase `--interactive`
+
+```bash
+
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash" but keep only the previous commit's log message.
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+
+```
+
+---
+layout: center
+title: onto
+---
+
+## git rebase `--onto <new> <old>`
+
+TODO
+
+---
 layout: default
-title: resources
+title: Resources
+hideInToc: true
 ---
 
 # Resources
 
-<br><br>
+<br>
 
 - <a href="https://github.com/manutero/octo-git-42" target="_blank" alt="GitHub"
 class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
@@ -336,3 +305,8 @@ Slides <clarity-image-gallery-line /></a>
 - <a href='https://www.freepik.com/vectors/background' target="_black" alt="Bacground vector"
 class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
 Free Backgrounds <bi-image /></a>
+
+---
+title: End
+layout: end
+---
