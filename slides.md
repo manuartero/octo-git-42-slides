@@ -6,7 +6,7 @@ class: "text-center"
 title: Cover
 highlighter: shiki
 lineNumbers: false
-colorSchema: 'dark'
+colorSchema: "dark"
 info: |
   # Git: Playing With History
   ## A workshop for 42 Campus
@@ -21,7 +21,6 @@ fonts:
   # use with `font-serif` css class from windicss
   serif: "Robot Slab"
   mono: "Courier"
-
 ---
 
 # Git: playing with History
@@ -32,7 +31,6 @@ A workshop for 42 Campus
 
 ---
 layout: intro
-image: /images/who-am-i/tetuan-valley.png
 title: Who am I?
 hideInToc: true
 ---
@@ -42,31 +40,20 @@ hideInToc: true
     color: pink;
   }
 </style>
+
 # Who am I?
 
 <v-clicks>
 
-  - Tetuan Valley (Intern) <span>[ 2012 ]</span>
-  - Wayra (Intern) <span>[ 2013 ]</span>
-  - Yaap (Junior) <span>[ 2014 ]</span>
-  - Doctor 24 (Junior) <span>[ 2015 ]</span>
-  - Tuenti (Middle)<span>[ 2017 ]</span>
-  - Telefonica (Senior)<span>[ 2022 ]</span>
+- Tetuan Valley (Intern) <span>[ 2012 ]</span>
+- Wayra (Intern) <span>[ 2013 ]</span>
+- Yaap (Junior) <span>[ 2014 ]</span>
+- Doctor 24 (Junior) <span>[ 2015 ]</span>
+- Tuenti (Middle)<span>[ 2017 ]</span>
+- Telefonica (Senior)<span>[ 2022 ]</span>
 
 </v-clicks>
 
-::right::
-<div class="abs-br m-6 flex gap-2">
-<a href="https://github.com/manutero" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-</a>
-
-<a href="https://stackoverflow.com/users/1614677/manu?tab=profile" target="_blank" alt="Stackoverflow"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <cib-stackoverflow />
-</a>
-</div>
 ---
 layout: section
 title: index
@@ -89,6 +76,7 @@ hideInToc: true
 ---
 
 ## Once you `$> git commit`,
+
 ## **you can't losse your work**
 
 ---
@@ -155,7 +143,6 @@ title: Intro Rebase
   }
 </style>
 
-
 # `git rebase`
 
 ### Rewrite the history
@@ -183,6 +170,44 @@ title: Intro Rebase
 </div>
 
 ---
+layout: two-cols
+title: In a Nutshell
+---
+
+### Before
+
+<br>
+
+```bash
+$(my-branch)> git status
+```
+
+```
+
+A---B---C---F---G (main)
+         \
+          D---E (HEAD my-branch)
+
+```
+
+::right::
+
+### After
+
+<br>
+
+```bash
+$(my-branch)> git rebase main
+```
+
+```
+ A---B---C---F---G (main)
+                  \
+                   D'---E' (HEAD my-branch)
+
+```
+
+---
 layout: cover
 background: "/images/backgrounds/bg-1.jpg"
 title: Workshop Time
@@ -197,7 +222,7 @@ title: Example repo - main
 hideInToc: true
 ---
 
-##  <carbon-logo-github /> Octo-Git-42
+## <carbon-logo-github /> Octo-Git-42
 
 - branch: `main`
 - commit: `df55345`
@@ -223,10 +248,12 @@ hideInToc: true
 <img src="/images/repo/tree-main-layout.png">
 
 ---
+
 layout: image-right
 image: /images/repo/detects_42.png
 title: Example repo - tree-monkey-counter
 hideInToc: true
+
 ---
 
 ## <carbon-logo-github /> Octo-Git-42
@@ -276,13 +303,103 @@ title: Cheat Sheet
 ```
 
 ---
-layout: center
-title: onto
+layout: image
+image: /images/dr-strange.jpg
+title: Responsibility
 ---
 
-## git rebase `--onto <new> <old>`
+## With great power comes...
 
-TODO
+<br>
+
+- public branches
+- `merge` vs. `rebase`
+- ~~`pull --force`~~ `reset --hard`
+
+---
+layout: default
+title: Internals
+---
+
+## Internals
+
+<br>
+
+```c {all|4,5,7,8|2,3,10,11}
+struct Commit {
+  uuid_t sha;
+  Commit parent;
+  char msg[];
+  Blob content[];
+
+  User author;
+  time_t timestamp;
+
+  User commiter;
+  time_t commit_timestamp;
+
+  ...
+};
+```
+
+---
+layout: two-cols
+title: onto
+hideInToc: true
+---
+
+### Before
+
+```bash
+git rebase `--onto <new-base> <old-base>`
+```
+
+```
+
+Before
+A---B---C---F---G (main)
+         \
+          D---E---H---I (HEAD my-feature)
+
+```
+
+::right::
+
+### After
+
+```
+git rebase --onto F D
+```
+
+```
+
+A---B---C---F---G (main)
+             \
+              E'---H'---I' (HEAD my-feature)
+
+```
+
+---
+layout: center
+title: Form
+---
+
+<style>
+  h1 svg {
+    width: 400px;
+    height: 400px;
+  };
+
+  h1 svg:hover {
+    color: gold;
+  };
+</style>
+
+<h1>
+  <a href="https://forms.gle/s4upYsGyzY2UEu7J6">
+    <carbon-location-star />
+  </a>
+</h1>
 
 ---
 layout: default
@@ -295,18 +412,22 @@ hideInToc: true
 <br>
 
 - <a href="https://github.com/manutero/octo-git-42" target="_blank" alt="GitHub"
-class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-Repository <carbon-logo-github /></a>
+  class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+  Repository <carbon-logo-github /></a>
 
-- <a href='https://www.freepik.com/vectors/background' target="_black" alt="Slides"
-class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-Slides <clarity-image-gallery-line /></a>
+- <a href='https://github.com/manutero/octo-git-42-slides/blob/main/slides-export.pdf' target="_black" alt="Slides"
+  class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+  Slides <clarity-image-gallery-line /></a>
 
 - <a href='https://www.freepik.com/vectors/background' target="_black" alt="Bacground vector"
-class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-Free Backgrounds <bi-image /></a>
+  class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+  Free Backgrounds <bi-image /></a>
 
 ---
+layout: image
+image: /images/spiderman-42.jpg
 title: End
-layout: end
+hideInToc: true
 ---
+
+# OK?
